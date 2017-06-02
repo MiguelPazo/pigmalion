@@ -12,7 +12,7 @@ class CompleteRangeService
             if (is_numeric($number)) {
                 $number = (int)$number;
 
-                if ($number > 0) {
+                if ($number > 0 && $number < 101) {
                     if (!in_array($number, $numberClean)) {
                         $numberClean[] = $number;
                     }

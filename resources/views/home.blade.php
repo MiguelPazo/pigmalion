@@ -37,11 +37,11 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" style="margin-top: 20px">
             <h3>Change String</h3>
 
             <div class="col-sm-5">
-                <input type="text" class="form-control before" maxlength="30"/>
+                <input type="text" class="form-control before" maxlength="100"/>
             </div>
             <div class="col-sm-2 text-center">
                 <button class="btn btn-primary btn-action" rel="{{ url('/change-string') }}">Process</button>
@@ -51,11 +51,11 @@
             </div>
         </div>
 
-        <div class="col-sm-12">
+        <div class="col-sm-12" style="margin-top: 20px">
             <h3>Clear Par</h3>
 
             <div class="col-sm-5">
-                <input type="text" class="form-control before" maxlength="30"/>
+                <input type="text" class="form-control before" maxlength="100"/>
             </div>
             <div class="col-sm-2 text-center">
                 <button class="btn btn-primary btn-action" rel="{{ url('/clear-par') }}">Process</button>
@@ -65,11 +65,11 @@
             </div>
         </div>
 
-        <div class="col-sm-12">
-            <h3>Complete Range (Separated by ,)</h3>
+        <div class="col-sm-12" style="margin-top: 20px">
+            <h3>Complete Range (Separated by ',' and less than 101)</h3>
 
             <div class="col-sm-5">
-                <input type="text" class="form-control before" maxlength="30"/>
+                <input type="text" class="form-control before" maxlength="100"/>
             </div>
             <div class="col-sm-2 text-center">
                 <button class="btn btn-primary btn-action" rel="{{ url('/complete-range') }}">Process</button>

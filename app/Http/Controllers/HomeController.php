@@ -4,12 +4,15 @@
 use App\Services\Facades\ChangeStringFac;
 use App\Services\Facades\ClearParFac;
 use App\Services\Facades\CompleteRangeFac;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function changeString($data)
+    public function changeString(Request $request)
     {
-        if (strlen($data) <= 30) {
+        $data = $request->get('data');
+
+        if (strlen($data) <= 100) {
             $response = ChangeStringFac::build($data);
 
             return response()->json($response);
@@ -18,9 +21,11 @@ class HomeController extends Controller
         }
     }
 
-    public function clearPar($data)
+    public function clearPar(Request $request)
     {
-        if (strlen($data) <= 30) {
+        $data = $request->get('data');
+
+        if (strlen($data) <= 100) {
             $response = ClearParFac::build($data);
 
             return response()->json($response);
@@ -29,9 +34,11 @@ class HomeController extends Controller
         }
     }
 
-    public function completeRange($data)
+    public function completeRange(Request $request)
     {
-        if (strlen($data) <= 30) {
+        $data = $request->get('data');
+
+        if (strlen($data) <= 100) {
             $response = CompleteRangeFac::build($data);
 
             return response()->json($response);

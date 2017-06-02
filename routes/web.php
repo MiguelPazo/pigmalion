@@ -4,6 +4,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/change-string/{data}', 'HomeController@changeString');
-Route::get('/clear-par/{data}', 'HomeController@clearPar');
-Route::get('/complete-range/{data}', 'HomeController@completeRange');
+Route::get('/change-string', 'HomeController@changeString');
+Route::get('/clear-par', 'HomeController@clearPar');
+Route::get('/complete-range', 'HomeController@completeRange');
